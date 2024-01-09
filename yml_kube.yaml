@@ -17,9 +17,9 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: frontend # Assurez-vous que le nom de l'image correspond à celui que vous avez donné lors de la construction du conteneur
+        image: frontend 
         ports:
-        - containerPort: 4200  # Port sur lequel votre application écoute à l'intérieur du conteneur
+        - containerPort: 4200  
 
 ---
 # frontend-service.yaml
@@ -34,6 +34,6 @@ spec:
     app: frontend
   ports:
     - protocol: TCP
-      port: 80  # Port sur lequel le service sera exposé à l'extérieur
-      targetPort: 4200  # Port sur lequel le conteneur écoute à l'intérieur
-  type: LoadBalancer  # Changez en NodePort ou ClusterIP selon vos besoins
+      port: 80  
+      targetPort: 4200  
+  type: LoadBalancer 
